@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -137,22 +138,23 @@
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <div class="col">
           <div class="card border-0 shadow-lg h-100">
-            <img src="images/shoes/shoe-1.png" class="card-img-top" alt="...">
+            <img onmouseover="changePicOne()" onmouseout="changePicTwo()" id="myImg" src="images/shoes/shoe-1.png"
+              class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Supply 350</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                 content. This content is a little bit longer.</p>
-
             </div>
             <div class="card-footer border-0">
               <h5>$120</h5>
-              <button class="panda-btn-buy-now">Buy Now >></button>
+              <button class="btn-panda panda-btn-buy-now">Buy Now >></button>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card border-0 shadow-lg h-100">
-            <img src="images/shoes/shoe-2.png" class="card-img-top" alt="...">
+            <img onmouseover="changePicThree()" onmouseout="changePicFour()" id="mySecondImg"
+              src="images/shoes/shoe-2.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Nike 360</h5>
               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -160,13 +162,14 @@
             </div>
             <div class="card-footer border-0">
               <h5>$320</h5>
-              <button class="panda-btn-buy-now">Buy Now >></button>
+              <button class="btn-panda panda-btn-buy-now">Buy Now >></button>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card border-0 shadow-lg h-100">
-            <img src="images/shoes/shoe-3.png" class="card-img-top" alt="...">
+            <img onmouseover="changePicFive()" onmouseout="changePicSix()" id="myThirdImg" src="images/shoes/shoe-3.png"
+              class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Red Airmax</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -174,7 +177,7 @@
             </div>
             <div class="card-footer border-0">
               <h5>$350</h5>
-              <button class="panda-btn-buy-now">Buy Now >></button>
+              <button class="btn-panda panda-btn-buy-now">Buy Now >></button>
             </div>
           </div>
         </div>
@@ -183,7 +186,7 @@
 
     <!-- backpacks -->
     <section class="container my-5" id="backpack">
-      <h2>Backpacks</h2>
+      <h2 id="backpack-header">Backpacks</h2>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <div class="col">
           <div class="card border-0 shadow-lg h-100">
@@ -196,7 +199,7 @@
             </div>
             <div class="card-footer border-0">
               <h5>$120</h5>
-              <button class="panda-btn-buy-now">Buy Now >></button>
+              <button class="btn-panda panda-btn-buy-now">Buy Now >></button>
             </div>
           </div>
         </div>
@@ -210,7 +213,7 @@
             </div>
             <div class="card-footer border-0">
               <h5>$320</h5>
-              <button class="panda-btn-buy-now">Buy Now >></button>
+              <button class="btn-panda panda-btn-buy-now">Buy Now >></button>
             </div>
           </div>
         </div>
@@ -224,29 +227,38 @@
             </div>
             <div class="card-footer border-0">
               <h5>$350</h5>
-              <button class="panda-btn-buy-now">Buy Now >></button>
+              <button class="btn-panda panda-btn-buy-now">Buy Now >></button>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Subscribe -->
-    <section style="height: 300px;" class="container panda-bg-info d-flex justify-content-center align-items-center rounded-3"
-      id="Subscribe">
+    <section style="height: 300px;"
+      class="container panda-bg-info d-flex justify-content-center align-items-center rounded-3" id="Subscribe">
       <div>
         <h1>STAY IN TOUCH</h1>
         <p>Get updates on sales, specials and more</p>
-        <input class="form-control" type="text" placeholder="Your Email">
+        <input id="email-form" class="form-control" type="text" placeholder="Type 'Email' here">
         <br>
-        <button class="panda-btn-buy-now">SUBMIT</button>
+        <button disabled id="confirm-btn" class="//panda-btn-buy-now">SUBMIT</button>
       </div>
     </section>
   </main>
   <footer class="mt-5 text-center">
     <p><small>©2020, Panda Commerce, All rights resevered, Sofia Bulgaria</small></p>
+    <!-- <button onclick="check()">footer</button> -->
   </footer>
+  <script>
+    document.getElementById('Subscribe').addEventListener('dblclick', function(){
+      document.getElementById('Subscribe').style.backgroundColor = '#d2d2f6';
+    });
+  </script>
   <!-- bootstrap script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
+
+  <!--external js -->
+  <script src="js/external.js"></script>
 </body>
